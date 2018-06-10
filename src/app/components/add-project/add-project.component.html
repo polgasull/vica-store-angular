@@ -1,0 +1,36 @@
+<h2>
+  Añadir proyecto nuevo
+</h2>
+
+<form>
+  <fieldset>
+    <legend> Información del proyecto </legend>
+    <label> Nombre </label>
+    <input type="text" [(ngModel)]="newProject.name" name="name" required />
+
+    <label> Ubicación </label>
+    <input type="text" [(ngModel)]="newProject.location" name="location" required />
+
+    <label> Superfície </label>
+    <input type="text" [(ngModel)]="newProject.surface" name="surface" required />
+
+    <label> Duración </label>
+    <input type="text" [(ngModel)]="newProject.duration" name="duration" required />
+
+    <label> Descripción </label>
+    <input type="text" [(ngModel)]="newProject.description" name="description" required />
+
+    <label> Imagen </label>
+    <input type="text" [(ngModel)]="newProject.image" name="name" required />
+
+    <label> Tags </label>
+    <input type="text" #tag maxlength="10"/>
+    <button (click)="addTag(tag.value); tag.value = ''"> Añadir </button>
+
+    <ul>
+      <li *ngFor="let tag of newProject.tags"> {{ tag }} </li>
+    </ul>
+
+  </fieldset>
+  <button (click)="createNew()"> submit </button>
+</form>

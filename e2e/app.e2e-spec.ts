@@ -1,6 +1,6 @@
 import { AppPage } from './app.po';
 
-describe('fe-phone-store App', () => {
+describe('fe-vica-sl App', () => {
   let page: AppPage;
 
   beforeEach(() => {
