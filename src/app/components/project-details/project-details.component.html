@@ -1,24 +1,30 @@
-<h1> Detalles del Proyecto </h1>
-<a [routerLink]="['/projects']">Ver todos</a>
+
+<div class="row">
+  <div class="col">
+    <h1> Detalles del Proyecto </h1>
+  </div>
+  <div class="col">
+    <a [routerLink]="['/projects']" class="btn btn-primary pull-right"> Ver todos </a>
+  </div>
+</div>
 
 <div *ngIf="project">
   <div class="project-thumbnail">
-    <img height="300" [src]="project.image" alt="">
+    <img height="300" width="100%" [src]="project.image" alt="">
   </div>
 
   <div class="project-info">
-    <h2>{{ project.name }}</h2>
+    <h4>{{ project.name }}</h4>
     <p> {{ project.location }}</p>
     <p> {{ project.surface }}</p>
     <p> {{ project.duration }}</p>
     <p> {{ project.description }}</p>
 
     <div *ngIf="project.tags.length">
-      <h4> Tags </h4>
-      <ul>
-        <li *ngFor="let tag of project.tags">{{ tag &nbsp;}}</li>
+      <h6> Etiquetas </h6>
+      <ul class="list-inline">
+        <li class="list-inline-item" *ngFor="let tag of project.tags">#{{ tag &nbsp;}}</li>
       </ul>
     </div>
   </div>
-  <button (click)="deleteProject()"> Borrar </button>
 </div>

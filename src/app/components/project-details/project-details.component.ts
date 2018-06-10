@@ -28,14 +28,4 @@ export class ProjectDetailsComponent implements OnInit {
         this.project = project;
       })
   }
-
-  deleteProject() {
-    if (window.confirm('Are you sure?')) {
-      this.vicaApiService.remove(this.project._id)
-      .subscribe(() => {
-        this.router.navigate(['']);
-      });
-    }
-  }
-
 }

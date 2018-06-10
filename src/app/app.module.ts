@@ -14,7 +14,8 @@ import { FooterComponent } from './components/footer/footer.component';
 import { AddProjectComponent } from './components/add-project/add-project.component';
 import { LayoutComponent } from './components/layout/layout.component';
 import { HomeComponent } from './components/home/home.component';
-import { EditProjectComponent } from './edit-project/edit-project.component'
+import { EditProjectComponent } from './components/edit-project/edit-project.component';
+import { ProjectCardComponent } from './components/project-card/project-card.component'
 
 export const routes: Routes = [
   {
@@ -23,6 +24,7 @@ export const routes: Routes = [
       { path: 'projects', component: ProjectsComponent},
       { path: 'projects/new', component: AddProjectComponent},
       { path: 'projects/:id', component: ProjectDetailsComponent},
+      { path: 'projects/edit/:id', component: EditProjectComponent},
       { path: '', component: HomeComponent},
     ]
   },
@@ -39,7 +41,8 @@ export const routes: Routes = [
     AddProjectComponent,
     LayoutComponent,
     HomeComponent,
-    EditProjectComponent
+    EditProjectComponent,
+    ProjectCardComponent
   ],
   imports: [
     BrowserModule,

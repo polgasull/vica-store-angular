@@ -1,19 +1,13 @@
-<div class="projects-content">
-  <h1> Proyectos </h1>
-  <p><a class="btn btn-primary btn-sm" [routerLink]="['/projects/new']" role="button">Añadir Proyecto</a></p>
 
-  <div>
-    <div *ngFor="let project of projects">
-      <div class="card card-projects" style="width: 18rem;">
-        <img class="card-img-top" [src]="project.image"  alt="Project image cap">
-        <div class="card-body">
-          <h4 class="card-title">{{ project.name }}</h4>
-          <p class="card-text">{{ project.location }}</p>
-          <p> <span class="badge badge-info">{{project.tags}}</span></p>  
-          <a class="btn btn-primary" [routerLink]="['/projects', project._id]">Ver detalles</a>
-          <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-        </div>
-      </div>
-    </div>
+<div class="row">
+  <div class="col">
+    <h1> Proyectos </h1>
+    <p><a class="btn btn-primary btn-sm" [routerLink]="['/projects/new']" role="button">Añadir Proyecto</a></p>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-sm" *ngFor="let project of projects">
+    <app-project-card [projectCard]="project"></app-project-card>
   </div>
 </div>

@@ -24,7 +24,7 @@ export class VicaApiService {
   }
 
   edit(project) {
-    return this.http.patch(`${this.BASE_URL}/api/projects/${project.id}`, project)
+    return this.http.patch(`${this.BASE_URL}/api/projects/${project._id}`, project)
     .map((res) => res.json());
   }
 

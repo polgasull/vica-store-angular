@@ -9,8 +9,7 @@ import { VicaApiService } from '../../services/vica-api.service';
   providers: [VicaApiService]
 })
 export class ProjectsComponent implements OnInit {
-  projects;
-
+  projects = [];
 
   constructor(
     private router: Router,

@@ -1,0 +1,20 @@
+<div class="card card-projects">
+  <img class="card-img-top" [src]="projectCard.image"  alt="Project image cap">
+  <div class="card-body">
+    <h4 class="card-title">{{ projectCard.name }}</h4>
+    <p class="card-text">{{ projectCard.location }}</p>
+    <ul class="list-inline">
+      <li *ngFor="let tag of projectCard.tags" class="list-inline-item badge badge-info"> #{{tag}} </li>
+    </ul>
+  </div>
+  <div class="card-footer">
+    <div class="row">
+      <div class="col">
+        <a class="btn btn-success col" [routerLink]="['/projects', projectCard._id]"> Ver </a>
+      </div>
+      <div class="col">
+        <a class="btn btn-primary col"  [routerLink]="['/projects/edit', projectCard._id]"> Editar </a>
+      </div>
+    </div>
+  </div>
+</div>
