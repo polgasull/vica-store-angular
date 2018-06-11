@@ -5,7 +5,7 @@ import { VicaApiService } from '../../services/vica-api.service';
 @Component({
   selector: 'app-projects',
   templateUrl: './projects.component.html',
-  styleUrls: ['./projects.component.css'],
+  styleUrls: ['./projects.component.scss'],
   providers: [VicaApiService]
 })
 export class ProjectsComponent implements OnInit {
